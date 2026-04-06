@@ -1,11 +1,4 @@
-#include <filesystem>
-#include <fstream>
-#include <iostream>
-#include <optional>
-#include <string>
-#include <vector>
-#include <cstdlib>
-#include <random>
+#include <bits/stdc++.h>
 
 // Compiler part
 #include "Compiler/lexer.hpp"
@@ -83,10 +76,8 @@ int main(int argc, char** argv) {
   // std::exit(0); // for debug the lexer 
 
   Parser::Parser parser = Parser::Parser(lexer_tok);
-  parser.mainParserLoop();
+  // parser.mainParserLoop();
 
-
-  std::exit(0);
   Compiler::compiler comp{lexer_tok};
   
   auto comp_tok = comp.makeNode();
@@ -101,7 +92,7 @@ int main(int argc, char** argv) {
   uniform_int_distribution<int> dist(10,30);
   int size = dist(random_gen);
 
-  for (int i{}; i <= size; i++) {
+  for (auto i{0}; i <= size; i++) {
 	  file_name += static_cast<char>(dist(random_gen) % 26 + 'a');
   }
 

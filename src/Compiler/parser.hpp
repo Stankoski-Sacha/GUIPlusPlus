@@ -82,6 +82,7 @@ public:
 
 	bool mainParserLoop() {
 		while (lexer_tokens[pos].type != Lexer::TokenType::EndOfFile) {
+			if (curr().type == Lexer::TokenType::RIGHT_BRACE) break; // End of file
 			except(Lexer::TokenType::IDENTIFIER); pos++;
 			except(Lexer::TokenType::LEFT_BRACE); pos++;
 			except(Lexer::TokenType::DOT); pos++;

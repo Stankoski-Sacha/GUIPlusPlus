@@ -99,7 +99,7 @@ private:
 	
 
 	std::string makeButtonInitCode(int buttonID) {
-		return std::format("Button button{} = Button({}, {}, {}, {}, \"{}\", font);\n",
+		return std::format("	Button button{} = Button({}, {}, {}, {}, \"{}\", font);\n",
 				buttonID,
 				componants.buttonsCreated[buttonID].x ,
 				componants.buttonsCreated[buttonID].y ,
@@ -110,7 +110,7 @@ private:
 	}
 
 	std::string makeCheckBoxInitCode(int checkBoxID) {
-		return std::format("CheckBox check{} = CheckBox({}, {}, {}, {});\n",
+		return std::format("	CheckBox check{} = CheckBox({}, {}, {}, {});\n",
 				checkBoxID,
 				componants.CheckBoxCreated[checkBoxID].x,
 				componants.CheckBoxCreated[checkBoxID].y,
@@ -120,7 +120,7 @@ private:
 	}
 
 	std::string makeSliderInitCode(int sliderID) {
-		return std::format("Slider slider{} = Slider({}, {}, {}, {}, font, {}, {});\n",
+		return std::format("	Slider slider{} = Slider({}, {}, {}, {}, font, {}, {});\n",
 				sliderID,
 				componants.sliderCreated[sliderID].x,
 				componants.sliderCreated[sliderID].y, 
@@ -132,7 +132,7 @@ private:
 	}
 
 	std::string renderCode(std::string toRender) {
-		return std::format("{}.render(ren);\n", toRender);
+		return std::format("		{}.render(ren);\n", toRender);
 	}
 
 	std::string embedFontCode() {
@@ -147,7 +147,7 @@ private:
 	}
 
 	std::string openFontCode() {
-		return "TTF_Font* font = TTF_OpenFont(\"LiberationSans-Regular.ttf\", 20);\n";
+		return "	TTF_Font* font = TTF_OpenFont(\"LiberationSans-Regular.ttf\", 20);\n";
 	}
 
 	std::string makeTextBoxisInsideCode(int textBoxID) {
@@ -155,7 +155,9 @@ private:
 	}
 
 	std::string makeCheckBoxisInsideCode(int checkBoxID) {
-		return std::format("if (check{}.isInside(mx, my)) {{ check{}.switchBox(ren);\n }}", checkBoxID, checkBoxID);
+		return std::format("				if (check{}.isInside(mx, my)) {{ check{}.switchBox(ren);\n }}", 
+				checkBoxID, checkBoxID
+		);
 
 	}
 
