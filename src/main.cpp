@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <optional>
+#include <iostream>
+#include <fstream>
+#include <random>
+#include <cstdlib>
 
 // Compiler part
 #include "Compiler/lexer.hpp"

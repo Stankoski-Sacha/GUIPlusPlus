@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <cstddef>
+#include <format>
 
 // Lexer part
 #include "lexer.hpp"

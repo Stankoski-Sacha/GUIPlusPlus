@@ -2,8 +2,8 @@
 
 #include <cctype>
 #include <fstream>
-#include <iostream>
 #include <vector>
+#include <cstddef>
 
 // Types of tokens
 namespace Lexer {

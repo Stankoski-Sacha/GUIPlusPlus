@@ -1,7 +1,9 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-#include <bits/stdc++.h>
+#include <utility>
+#include <string>
+#include <vector>
 
 // Includes 
 #include "lexer.hpp"
