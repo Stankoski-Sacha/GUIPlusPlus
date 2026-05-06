@@ -1,0 +1,7 @@
+Window {
+	.data {
+		position: 100, 100;
+		dimensions: 400, 300;
+		title: "Hello World";
+	}
+}

@@ -1,0 +1,41 @@
+Window {
+	.data {
+		position: 200, 200;
+		dimensions: 400, 400;
+		title: "Button Panel";
+	}
+
+	.content {
+		Button {
+			.data {
+				position: 130, 60;
+				dimensions: 140, 50;
+				text: "New";
+			}
+		}
+
+		Button {
+			.data {
+				position: 130, 130;
+				dimensions: 140, 50;
+				text: "Open";
+			}
+		}
+
+		Button {
+			.data {
+				position: 130, 200;
+				dimensions: 140, 50;
+				text: "Save";
+			}
+		}
+
+		Button {
+			.data {
+				position: 130, 270;
+				dimensions: 140, 50;
+				text: "Quit";
+			}
+		}
+	}
+}

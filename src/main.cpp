@@ -3,6 +3,7 @@
 #include <fstream>
 #include <random>
 #include <cstdlib>
+#include <filesystem>
 
 // Compiler part
 #include "Compiler/lexer.hpp"
@@ -80,7 +81,13 @@ int main(int argc, char** argv) {
   // std::exit(0); // for debug the lexer 
 
   Parser::Parser parser = Parser::Parser(lexer_tok);
-  // parser.mainParserLoop();
+  
+  try {
+    parser.mainParserLoop();
+  } catch (const std::runtime_error& e) {
+    std::cerr << "GUI++ Parse Error : " << e.what() << '\n';
+    return 1;
+  }
 
   Compiler::compiler comp{lexer_tok};
   

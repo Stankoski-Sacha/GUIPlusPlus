@@ -1,0 +1,75 @@
+Window {
+	.data {
+		position: 200, 100;
+		dimensions: 500, 550;
+		title: "Create Account";
+	}
+
+	.content {
+		TextBox {
+			.data {
+				position: 120, 60;
+				dimensions: 260, 40;
+				text: "First Name";
+				editable: true;
+			}
+		}
+
+		TextBox {
+			.data {
+				position: 120, 120;
+				dimensions: 260, 40;
+				text: "Last Name";
+				editable: true;
+			}
+		}
+
+		TextBox {
+			.data {
+				position: 120, 180;
+				dimensions: 260, 40;
+				text: "Email";
+				editable: true;
+			}
+		}
+
+		TextBox {
+			.data {
+				position: 120, 240;
+				dimensions: 260, 40;
+				text: "Password";
+				editable: true;
+			}
+		}
+
+		CheckBox {
+			.data {
+				position: 120, 310;
+				dimensions: 28, 28;
+			}
+		}
+
+		CheckBox {
+			.data {
+				position: 120, 360;
+				dimensions: 28, 28;
+			}
+		}
+
+		Button {
+			.data {
+				position: 120, 430;
+				dimensions: 120, 45;
+				text: "Register";
+			}
+		}
+
+		Button {
+			.data {
+				position: 260, 430;
+				dimensions: 120, 45;
+				text: "Cancel";
+			}
+		}
+	}
+}

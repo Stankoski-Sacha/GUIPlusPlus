@@ -1,0 +1,45 @@
+Window {
+	.data {
+		position: 150, 150;
+		dimensions: 500, 400;
+		title: "Settings";
+	}
+
+	.content {
+		CheckBox {
+			.data {
+				position: 60, 80;
+				dimensions: 30, 30;
+			}
+		}
+
+		CheckBox {
+			.data {
+				position: 60, 140;
+				dimensions: 30, 30;
+			}
+		}
+
+		CheckBox {
+			.data {
+				position: 60, 200;
+				dimensions: 30, 30;
+			}
+		}
+
+		CheckBox {
+			.data {
+				position: 60, 260;
+				dimensions: 30, 30;
+			}
+		}
+
+		Button {
+			.data {
+				position: 180, 330;
+				dimensions: 140, 45;
+				text: "Save Settings";
+			}
+		}
+	}
+}

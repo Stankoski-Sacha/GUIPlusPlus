@@ -1,0 +1,35 @@
+Window {
+	.data {
+		position: 200, 200;
+		dimensions: 400, 300;
+		title: "Login";
+	}
+
+	.content {
+		TextBox {
+			.data {
+				position: 100, 60;
+				dimensions: 200, 40;
+				text: "Username";
+				editable: true;
+			}
+		}
+
+		TextBox {
+			.data {
+				position: 100, 120;
+				dimensions: 200, 40;
+				text: "Password";
+				editable: true;
+			}
+		}
+
+		Button {
+			.data {
+				position: 150, 200;
+				dimensions: 100, 40;
+				text: "Login";
+			}
+		}
+	}
+}
